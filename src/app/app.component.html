@@ -1,0 +1,15 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <customHeader title="Moe :3"></customHeader>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <hello name="Bastian"></hello>
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </ion-content>
+</ion-app>
