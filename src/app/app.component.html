@@ -2,12 +2,13 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        <customHeader title="Moe :3"></customHeader>
+        {{ title }}
       </ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <hello name="Bastian"></hello>
+    <p>{{ dato }}</p>
     <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
       <ion-refresher-content></ion-refresher-content>
     </ion-refresher>

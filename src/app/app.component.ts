@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-import { HelloComponent } from './hello.component';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  title: string = 'Le Refresh Page :D';
+  dato: string = 'Try and pull down the page!';
   constructor() {}
   handleRefresh(event) {
     setTimeout(() => {
       var current = new Date();
-      document.getElementById(
-        'dato'
-      ).innerText = `Tidspunkt: ${current.toLocaleTimeString()}`;
+      this.dato = `Tidspunkt: ${current.toLocaleTimeString()}`;
       event.target.complete();
-    }, 2000);
+    }, 250);
   }
 }
